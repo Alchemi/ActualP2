@@ -1,0 +1,110 @@
+
+
+<ng-container *ngIf= "products.length !=0">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Product Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor=" let item of products; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.productName}}</td>
+                    <td><img style="width: 120px;" src ="{{item.image}}" alt=""></td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.total}}7762.23</td>
+                    <button (click) ="removeItem(item)" class="btn btn-danger">Delete</button>
+                </tr>
+                <tr>
+                    <td colspan="4"></td>
+                    <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                    <td><button routerLink="/" class="btn btn-primary">Shop More</button></td>
+                    <td><button class="btn btn-success">Checkout</button></td>
+                    <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</ng-container>
+
+
+
+
+
+<ng-container *ngIf= "products.length==0">
+<div class="container">
+    <div class="card">
+        <h3 class="card-title">My Cart</h3>
+    </div>
+    <div class="center">
+        <img src="" alt="">
+        <h2>Your Cart is Empty!</h2>
+        <h4>Buy Something!</h4>
+        <button routerLink="/" class="btn btn-primary">Shop Now!</button>
+    </div>
+</div>
+</ng-container>
+
+<!----MIGHT NOT NEED THE THINGS BELOW. I HOPE I KNOW WHAT TO DO WITH IT/FIX IT IF IT NEEDS FIXING----->
+
+
+
+<form [formGroup] ="checkoutForm" (ngSubmit)="onSubmit()">
+    <div class="inner-form ms-auto">
+       
+       <form>
+        <input type="text" placeholder="Enter Your Full Name" />
+        <input type="text" placeholder="Enter your Address" />
+        <input type="text" placeholder="Enter your Email" />
+        
+
+
+       </form>
+       
+       
+       
+        <!-- <p>
+            <a routerLink="/shipping" class="shipping">Shipping Prices</a>
+        </p>    
+        <div>
+        
+        <label for="name">
+            Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="address">
+            Address
+        </label>
+        <input id="address" type="text" formControlName="address">
+    </div>
+    <div>
+        <label for="email">
+            Email
+        </label>
+        <input id="address" type="text" formControlName="email">
+    </div>
+    
+    <!-- <button class ="button" type="submit">Purchase</button> -->
+    <button (click)="purchase()" class="button">Purchase</button> -->
+    </div>
+</form>
+
+
+

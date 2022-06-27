@@ -1,0 +1,91 @@
+<ng-container *ngIf="true">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>SKU</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>anime thing</td>
+                            <td>looks like this</td>
+                            <td>who?!</td>
+                            <th>777</th>
+                            <td>1</td>
+                            <td>777</td>
+                            <td>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+
+
+<ng-container *ngIf="false">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="" alt=""> <!---this is where the pic of the empty cart goes-->
+            <h4>your cart is empty!</h4>
+            <h6>Add items to your cart</h6>
+            <button class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+
+
+
+</ng-container>
+
+
+
+
+
+<!-----<h3>Cart</h3>
+
+<p>
+    <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<div class = "cart-item" *ngFor = "let item of items">
+    <span>{{ item.name }}</span>
+    <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="name">
+            Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+
+    <div>
+        <label for="address">
+            Address
+        </label>
+        <input id="address" type="text" formControlName="address">
+    </div>
+
+    <button class="button" type="submit">Purchase</button>
+
+</form>---->

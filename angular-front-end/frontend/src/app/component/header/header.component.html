@@ -1,0 +1,41 @@
+<header>
+    <div class="navbar navbar-dark bg-shadow-sm">
+      <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size: 40px; color:#E8A87C " class="fas fa-shipping-fast">&nbsp;
+            <strong style=>AnimeSQL </strong>
+            <div class="brand-logo">
+              
+              <a routerLink="/home" class="button fancy-button">
+                <i><img src = "assets/img/lotus.png" alt="~Lotus~">
+                </i>
+              </a>
+          </div>
+        </i>
+              <div class="nav">
+                
+                <div class ="nav-items">
+                  <div class="search">
+                      <input type="text" class="search-box" placeholder="What do you figure?">
+                      <button class ="search-btn">search</button>
+                  </div>
+                  <div class ="dark-mode">
+                    <button (click)="toggleDarkTheme()">Dark Theme</button>
+                  </div>
+                  
+                  </div>
+              </div>
+          <div>   
+        <a routerLink="/cart" class="button fancy-button">
+        <i class="material-icons"><img src ="assets/img/popcorn-cart.png" alt="~POP">
+        </i>
+        </a>
+      </div> 
+        
+    </div>
+    <ul class="links-container">
+      <li class="link-item"><a routerLink="/figurines" class="button fancy-button">Figurines</a></li>
+      <li class="link-item"><a routerLink="/manga" class="button fancy-button">Manga</a></li>
+      <li class="link-item"><a routerLink="/video" class="button fancy-button">Video</a></li>
+  </ul>
+    </div>
+  </header>

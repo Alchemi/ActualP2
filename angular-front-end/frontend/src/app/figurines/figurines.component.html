@@ -1,0 +1,20 @@
+<h2>Figurines</h2>
+
+<div *ngFor="let figurines of Figurines">
+
+    <h3>
+        <a [title]="figurines.type + ' details '"
+            [routerLink]="['/figurines', figurines.Id]">
+        {{ figurines.name }}
+    </a>
+
+    </h3>
+    <p *ngIf="figurines.description">
+        Description: {{ figurines.description }}
+    </p>
+    <button type="button">addToCart</button>
+
+    <button type="button" (click)="share()">
+        Share
+    </button>
+</div>

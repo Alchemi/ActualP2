@@ -1,0 +1,79 @@
+<div class= "card-top contrainer-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a >
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All Products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a >
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>Figurines</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a >
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>Manga</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a >
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>Videos</h6>
+            </a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<div class="container">
+    <div class="row">
+        <ng-container *NgFor="let item of Products">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt=""> <!---this is the api products thing gotta route it-->  
+                <h5> style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis; max-width:100ch;"{{item.title}}</h5>
+                <p>style="white-space:nowrap;overflow: hidden;text-overflow: ellipsis; max-width:100ch;"{{item.description}}</p>
+                <p><strong>Price:</strong>${{item.price}}</p>
+                <button class="btn btn-primary">Add to Cart</button> <!--not defined yet. need to see if it works w my dummy data add the click thingy. rn not working --> 
+            </div>
+
+        </ng-container>
+    
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-------<h2>Products</h2>
+
+<div *ngFor="let product of Product">
+
+    <h3>
+        <a [title]="product.type + ' details '"
+            [routerLink]="['/products', product.Id]">
+        {{ product.name }}
+    </a>
+
+    </h3>
+    <p *ngIf="product.description">
+        Description: {{ product.description }}
+    </p>
+    <button type="button">addToCart</button>
+
+    <button type="button" (click)="share()">
+        Share
+    </button>
+</div>----->
+

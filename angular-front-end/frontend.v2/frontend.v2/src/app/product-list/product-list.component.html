@@ -1,0 +1,24 @@
+<div class = "card-top container-fluid "></div>
+ <div class="container">
+    <div class="row g-4 gy-4">
+    <!-- <ng-container *ngFor= "let item of productList"> -->
+        <div class="card col-lg-3" *ngFor= "let item of productList">
+            <div class="productbox">
+           
+           
+           <h5 style= "white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+            
+            {{ item.productName }}
+            
+            </h5>
+            
+            <p style= "white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+            <img src = {{item.image}} alt = ""> 
+            <p><strong>Price:</strong>${{item.price}}</p>
+            <button class="btn btn-primary" (click)= addtocart(item)>Add to cart</button>
+        
+        </div>
+        </div>
+    <!-- </ng-container> -->
+    </div>
+ </div>
