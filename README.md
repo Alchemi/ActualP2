@@ -3,7 +3,7 @@ PROJECT NAME
   # Anime SQL
   # E-Commerce Website
 Project Description
-  ##
+  ## E-commerce Website dedicated to sell and promote Anime and Manga related products.
 ## Technologies Used
   * Spring MVC
   * Java VERSION 8
