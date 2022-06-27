@@ -13,7 +13,7 @@ import com.revature.utilities.HibernateUtil;
 @Repository
 public class OrderHistoryDAO {
 
-	public int checkout(OrderHistory oh) {
+	public int checkout(OrderHistory oh) {//add order to db
 //		String pass = user.getPassword();
 //		System.out.println(pass);
 		try(Session session = HibernateUtil.getSession()) {
@@ -35,7 +35,7 @@ public class OrderHistoryDAO {
 		}//look into insert
 
 	}
-	public List<OrderHistory> getAllOrders(){
+	public List<OrderHistory> getAllOrders(){//returns all orders from the database
 		Session ses = HibernateUtil.getSession();
 		List<OrderHistory> orderList = ses.createQuery("FROM OrderHistory").list();
 		HibernateUtil.closeSession();

@@ -40,7 +40,7 @@ public class ProductController {
 		return ps.getAllProducts();
 		//this one works
 	}
-	@GetMapping("/{id}")
+	@GetMapping("/{id}")//returns product by id
 	public ResponseEntity<Product> getProductById(@PathVariable("id") int id){
 		
 		p = ps.getProductById(id);
@@ -53,7 +53,7 @@ public class ProductController {
 		}
 	}
 	
-	@RequestMapping(value="/name")
+	@RequestMapping(value="/name")//returns product by name
 	public ResponseEntity<Product> getProductByName(@RequestParam("name") String name){
 		if(name == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
@@ -67,7 +67,7 @@ public class ProductController {
 		}
 	}
 	
-    @PostMapping("/addproduct")
+    @PostMapping("/addproduct")//adds product to database, not used until admin side of frontend is added
     public static ResponseEntity<Product> addProduct(@RequestBody Product product){
     	System.out.println(product.getId());
     	

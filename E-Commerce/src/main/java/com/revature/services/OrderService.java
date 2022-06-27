@@ -26,7 +26,7 @@ public class OrderService {
 	private OrderHistory oh;
 
 	
-	
+	//adds product to cart not used anymore
 	public ArrayList<Product> addToCart(Product p){
 		ProductDAO pd = new ProductDAO();
 		if(pd.getProductByName(p.getProductName())!=null) {
@@ -40,6 +40,7 @@ public class OrderService {
 		}
 				
 	}
+	//not used but removes from cart
 	public ArrayList<Product> removeFromCart(Product p){
 		if(p.getProductName()!=null && cartList!=null) {
 			for(Product prod : cartList) {
@@ -54,23 +55,27 @@ public class OrderService {
 		}
 	}
 	ArrayList<Integer> productids = new ArrayList<>();
-	public int checkout() {
+	//submits order information to the dao(orderid,userid,productid)
+	public int checkout(ArrayList<Product> cart) {
 		oh.setUserid(AuthController.u.getUserid());
-		for (Product product : cartList) {
+		for (Product product : cart) {
 			productids.add(product.getId());
 		}
 		oh.setProductid(productids);
 		return ohd.checkout(oh);
 		
 	}
+	//returns all orders from the ordertable
 	public List<OrderHistory> getAllOrders(){
 		return ohd.getAllOrders();
 	}
 
+	//not used frontend has same functionality
 	public void clearCart() {
 		// TODO Auto-generated method stub
 		cartList = null;
 	}
+	//returns cartitems not used
 	public void displaycart() {
 		// TODO Auto-generated method stub
 		for(Product p : cartList) {
