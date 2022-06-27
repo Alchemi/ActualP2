@@ -31,9 +31,7 @@ public class OrderController {
 		this.os = oService;
 	}
 
-	@PutMapping //Any HTTP PUT request sent to /avenger will go here
-	//@ReqeustBody will convert our JSON from the body of the request into an object we specify
-	// It is like @ResponseBody, but for requests
+	@PutMapping //adds to cart but not used
 	public ResponseEntity<ArrayList<Product>> addToCart(@RequestBody Product p){
 		if(p.getProductName() == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(cart);
@@ -44,15 +42,15 @@ public class OrderController {
 			return ResponseEntity.status(202).body(cart);
 		}
 	}
-	@PostMapping
-	public ResponseEntity<String> checkout(){
-		if(os.checkout()==1) {
+	@PostMapping//sends order information to persist to the database
+	public ResponseEntity<String> checkout(@RequestBody ArrayList<Product> cart){
+		if(os.checkout(cart)==1) {
 			return ResponseEntity.status(HttpStatus.OK).body("Checkout successful");
 		}else {
 			return ResponseEntity.status(HttpStatus.CONFLICT).body("Checkout was unsuccessful");
 		}
 	}
-	@GetMapping
+	@GetMapping//returns all orders
 	public List<OrderHistory> getAllOrders(){
 		return os.getAllOrders();
 	}
