@@ -24,7 +24,7 @@ public class ProductDAO {
 	public ProductDAO() {
 		// TODO Auto-generated constructor stub
 	}
-	@PersistenceContext
+	@PersistenceContext//adds product to the database
 	public static void addProduct(Product product) {
 		try(Session ses = HibernateUtil.getSession()){
 			ses.save(product);
@@ -37,7 +37,7 @@ public class ProductDAO {
 	}
 
 
-	public Product getProductByName(String name) {
+	public Product getProductByName(String name) {//gets product with matching name
 		Session ses = HibernateUtil.getSession();
 		Query q = ses.createQuery("FROM Product WHERE productname = ?1");
 		q.setParameter(1, name);
