@@ -36,7 +36,7 @@ public class AuthController {
 	
 	
 	
-	@PostMapping
+	@PostMapping//allows new user to create account recieves user object from frontend
 	public ResponseEntity<String> register(@RequestBody User user){
 		System.out.println(user.getPassword());
 		
@@ -49,7 +49,7 @@ public class AuthController {
 			return ResponseEntity.status(HttpStatus.CREATED).body("1");
 		}
 	}
-	@PostMapping("/login")
+	@PostMapping("/login")//authenticates with db to determine if user exists or password matches
 	public ResponseEntity<String> login(@RequestBody User user){
 		if(user.getUsername()==null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body("0");
@@ -64,14 +64,14 @@ public class AuthController {
 		}
 		
 	}
-	@GetMapping("/logout")
+	@GetMapping("/logout")//not used yet clear cart can be removed
 	public ResponseEntity<String> logout(){
 		os.clearCart();
 		u=null;
 		System.out.println("Logout successful");
 		return ResponseEntity.ok("1");
 	}
-	@GetMapping("/user")
+	@GetMapping("/user")//returns all users
 	public ResponseEntity<User> getUser(){
 		if (u!=null) {
 			return ResponseEntity.ok(u);

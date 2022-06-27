@@ -34,18 +34,19 @@ public class User {
 	// password must not be null
 	@Column(nullable = false)
 	private String email;
-	private String image;
+
 	
 	
 	
-	public User(int userid, String username, String password, String email, String image, String firstname,
-			String lastname, String contactnumber, Role role, Address address) {
+	
+
+	public User(int userid, String username, String password, String email, String firstname, String lastname,
+			String contactnumber, Role role, Address address) {
 		super();
 		this.userid = userid;
 		this.username = username;
 		this.password = password;
 		this.email = email;
-		this.image = image;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.contactnumber = contactnumber;
@@ -119,12 +120,6 @@ public class User {
 		this.role = role;
 	}
 	
-	
-	
-	
-	
-	
-	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -162,20 +157,6 @@ public class User {
 		this.password = password;
 	}
 	
-	
-	
-	
-	
-	
-	
-	public String getImage() {
-		return image;
-	}
-
-	public void setImage(String image) {
-		this.image = image;
-	}
-
 	public Address getAddress() {
 		return address;
 	}
@@ -192,8 +173,8 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [userid=" + userid + ", username=" + username + ", password=" + password + ", email=" + email
-				+ ", image=" + image + ", firstname=" + firstname + ", lastname=" + lastname + ", contactnumber="
-				+ contactnumber + ", role=" + role + ", address=" + address + "]";
+				+ ", firstname=" + firstname + ", lastname=" + lastname + ", contactnumber=" + contactnumber + ", role="
+				+ role + ", address=" + address + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -203,7 +184,6 @@ public class User {
 		result = prime * result + ((contactnumber == null) ? 0 : contactnumber.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
-		result = prime * result + ((image == null) ? 0 : image.hashCode());
 		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((role == null) ? 0 : role.hashCode());
@@ -239,11 +219,6 @@ public class User {
 			if (other.firstname != null)
 				return false;
 		} else if (!firstname.equals(other.firstname))
-			return false;
-		if (image == null) {
-			if (other.image != null)
-				return false;
-		} else if (!image.equals(other.image))
 			return false;
 		if (lastname == null) {
 			if (other.lastname != null)

@@ -36,7 +36,7 @@ public class UserController {
 		return us.getAllUsers();
 		//this one works
 	}
-	@GetMapping("/{id}")
+	@GetMapping("/{id}")//returns user by id
 	public ResponseEntity<User> getUserById(@PathVariable("id") int id){
 		System.out.println(id);
 		u = us.getUserById(id);
@@ -48,9 +48,7 @@ public class UserController {
 			return ResponseEntity.ok(u);
 		}
 	}
-	@PutMapping //Any HTTP PUT request sent to /avenger will go here
-	//@ReqeustBody will convert our JSON from the body of the request into an object we specify
-	// It is like @ResponseBody, but for requests
+	@PutMapping //needs testing to ensure it works as intended currently unused in frontend
 	public ResponseEntity<User> update(@RequestBody User u){
 		if(u==null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(u);

@@ -31,7 +31,7 @@ public class UserDAO {
 	}
 	
 			
-	public int register(User user) {
+	public int register(User user) {//persists user to the database
 //		String pass = user.getPassword();
 //		System.out.println(pass);
 		try(Session session = HibernateUtil.getSession()) {
@@ -54,7 +54,7 @@ public class UserDAO {
 
 	}
 	//gets user by username used for login authentication
-	public User getUserByUsername(String username) {
+	public User getUserByUsername(String username) {//returns user used by login
 		Session ses = HibernateUtil.getSession();
 		Query q = ses.createQuery("FROM User WHERE username = ?1");
 		q.setParameter(1, username);
