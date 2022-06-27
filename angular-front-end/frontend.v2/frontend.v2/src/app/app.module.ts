@@ -23,13 +23,13 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CartComponent,
-    
     HeaderComponent,
     ShippingComponent,
     ProductDetailsComponent,
@@ -40,6 +40,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    ProfileComponent
     
     
   ],
@@ -57,6 +58,7 @@ import { ContactComponent } from './pages/contact/contact.component';
       { path: 'products/:productId', component: ProductDetailsComponent },
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
+    { path: 'profile', component: ProfileComponent},
     { path: 'cart', component: CartComponent },
     { path: 'shipping', component: ShippingComponent},
     ])
