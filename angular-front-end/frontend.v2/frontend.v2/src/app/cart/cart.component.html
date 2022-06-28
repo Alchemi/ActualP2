@@ -65,17 +65,17 @@
 
 
 <form [formGroup] ="checkoutForm" (ngSubmit)="onSubmit()">
-    <div class="inner-form ms-auto">
+    <div class="inner-form">
        
-       <form>
-        <input type="text" placeholder="Enter Your Full Name" />
-        <input type="text" placeholder="Enter your Address" />
-        <input type="text" placeholder="Enter your Email" />
         
 
 
+       <form>
+        <div><input type="text" placeholder="Enter Your Full Name" /></div>
+        <div><input type="text" placeholder="Enter your Address" /></div>
+        <div> <input type="text" placeholder="Enter your Email" /></div>
        </form>
-       
+       <button (click)="purchase()" class="button">Purchase</button>
        
        
         <!-- <p>
@@ -102,7 +102,7 @@
     </div>
     
     <!-- <button class ="button" type="submit">Purchase</button> -->
-    <button (click)="purchase()" class="button">Purchase</button> -->
+    
     </div>
 </form>
 
