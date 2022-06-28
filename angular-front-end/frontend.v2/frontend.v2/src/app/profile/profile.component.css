@@ -33,6 +33,7 @@
   border-radius: 5px;
   margin-bottom: 10px;
   size-adjust: 100%;
+  
 }
 
 .wrapper .left h4{
@@ -41,11 +42,14 @@
 }
 
 .wrapper .right{
-  width: 65%;
+  width: 85%;
   background: #fff;
   padding: 30px 25px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  position: absolute; top: 5%; left:30%;
 }
 
 .wrapper .right .info,
@@ -87,6 +91,35 @@
   margin-bottom: 10px;
   color: #919aa3;
   align-content:stretch;
+}
+
+
+.form h1
+.wrapper .right .form_data .data{
+  display: flex;
+  justify-content: space-between;
+}
+
+.div.favorite{
+  display: flex;
+  padding: 10px 10px;
+  justify-content: space-around;
+}
+
+.div.aboutme{
+  display: flex;
+  padding: 10px 10px;
+  position: relative; top: 20%;
+  justify-content: space-around;
+}
+
+.button{
+  padding: 10px 106px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+ position: relative; top: 45%; right: 10%;
 }
 
 .wrapper .social_media ul{

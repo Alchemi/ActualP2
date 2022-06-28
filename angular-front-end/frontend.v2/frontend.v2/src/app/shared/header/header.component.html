@@ -1,6 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light" style= "background-color: #557A95">
 
+                                      <!-- logo and title -->
     <a class="navbar-brand" href="#"> <i><img src = "assets/img/lotus.png" width="60" heght= "60" class= "logo d-inline-block align-bottom" alt="~Lotus~">
       <strong style= "font-size: 40px; color:#E8A87C ">AnimeSQL </strong>
     </i> 
@@ -9,38 +10,48 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
+                                        <!-- searchbar -->
+
+    <form class="container-md h-100 w-50">
+      <div class="d-flex justify-content-center h-100">
+        <div class="searchbar">
+          <input class="search_input" type="text" name="" placeholder="Search...">
+          <a class="search_icon"><i><img src="../../../assets/img/search.png" alt="~search~">
+          </i>
+        </a>
+</div></div></form>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  
-      <div class="container h-75 w-75">
-        <div class="d-flex justify-content-center h-75 w-75">
-          <div class="searchbar">
-            <input class="search_input" type="text" name="" placeholder="Search...">
-            <a class="search_icon"><i><img src="../../../assets/img/search.png" alt="~search~">
-            </i>
-          </a>
-  </div></div></div>
+
+                                        <!-- profile -->
+
       <ul class="navbar-nav mr-auto">
         <li class="nav-profile">
           <a routerLink="/profile" class="button">
-            Profile
+            <i><img src ="../../../assets/img/person.png" alt="~Profile~">
+              </i>
           </a>
       </li>
-  
+
+                                        <!-- cart -->
+
         <li class="nav-cart">
             <a routerLink="/cart" class="button">
               <i class="material-icons"><img src ="assets/img/popcorn-cart.png" alt="~POP">
               </i>
             </a>
         </li>
-  
+
+                                        <!-- login/register -->
+                                        
         <li class="nav-loginreg">
           <a class="nav-tool-items">
             <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
             <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a>
           </a>
         </li>
-  
+                                        <!-- darkmode -->
         <li class="dark">
           <div class ="dark-mode">
             <button (click)="toggleDarkTheme()">

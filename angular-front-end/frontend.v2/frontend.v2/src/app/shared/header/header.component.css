@@ -198,3 +198,14 @@ display: flex;
     color:white;
     text-decoration:none;
     }
+
+.nav-profile{
+    display: flex;
+    padding: 0px 5px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    position: relative; left: 10%;
+}
