@@ -50,6 +50,7 @@ onSubmit(): void{
 onCheckout(products:any):void{
     this.cartService.pushOrder(this.products);
     this.emptycart();
+    
 }
 
 }
