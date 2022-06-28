@@ -42,6 +42,7 @@ constructor(private cartService : CartService,
     
 //this also might be stupid 39-44
 onSubmit(): void{
+    this.cartService.pushOrder(this.products);
     this.products = this.cartService.removeAllCart();
     window.alert("Your order has been placed. Thank you for your money <3");
     console.warn('Your order has been submitted', this.checkoutForm.value);
