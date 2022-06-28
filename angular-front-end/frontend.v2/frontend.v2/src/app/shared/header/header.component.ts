@@ -3,7 +3,7 @@ import { Product, products } from '../../product';
 import { LoginComponent } from '../../login/login.component';
 import { RegisterComponent } from '../../register/register.component';
 import { Router } from '@angular/router';
-
+import {Pipe, PipeTransform } from '@angular/core';
 
 //SPARKEY YOU IMPORT LOGINCOMPONENT, regiscomponent & router IF STUPID, DELETE.
 //sparkey you added private router : Router, delete if necessarry
@@ -24,7 +24,10 @@ export class HeaderComponent implements OnInit {
   toggleDarkTheme(): void{
     document.body.classList.toggle('dark-theme');
 }
+onSubmit(): void{
 
+
+}
 dataset = [products];
 
 

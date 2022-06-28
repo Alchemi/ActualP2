@@ -8,7 +8,7 @@
  
  <div class="wrapper">
     <div class="left">
-        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" 
+        <img src="../../assets/img/dog.jpg"
         alt="user" width="40%">
          <div class="choosefile-btn">
             
@@ -27,14 +27,27 @@
          <div class="info_data">
             <span>
               <div class="data">
-                <h4>Phone</h4>
+                <h3>Phone</h3>
                  <p>0001-213-998761</p>
            </div>
            <div class="data">
-             <h4>Address</h4>
+             <h3>Address</h3>
               <p>Los Angeles, California</p>
         </div>
+        
     </span>
+    <span class="form_data">
+      <form [formGroup] ="aboutMe">
+        <div class="favorite"><h3>My Favorite Anime/Manga</h3>
+            <div><input type="text" id="favorite" placeholder="GHIBLI" /></div></div>
+        
+            <div class="aboutme"><h3>About Me</h3>
+            <div><input type="text" id= "aboutme" placeholder="ABOUT ME" /></div></div>
+       </form>
+       <button type="button" (click)="onClickMe()" class="button">Submit</button>
+      </span>
+       
+
            <div class="social_media">
              <h3>Social Media</h3>
              <ul>

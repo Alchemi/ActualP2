@@ -10,9 +10,7 @@ import { FormBuilder } from "@angular/forms";
 export class CartComponent implements OnInit {
 public products : any = [];
 public grandTotal !: number;
-purchase(){
-    console.warn('Congratulations! Please check your email for purchase confirmation!')
-}
+
 //this might be stupid delete comma in component and lines15-17 and 21  if needed
 checkoutForm = this.formBuilder.group({
     name: "",
@@ -39,9 +37,12 @@ constructor(private cartService : CartService,
     emptycart(){
         this.cartService.removeAllCart();
     }
-    
+    purchase(){
+        console.warn('Congratulations! Please check your email for purchase confirmation!')
+    }
 //this also might be stupid 39-44
 onSubmit(): void{
+    this.cartService.pushOrder(this.products);
     this.products = this.cartService.removeAllCart();
     window.alert("Your order has been placed. Thank you for your money <3");
     console.warn('Your order has been submitted', this.checkoutForm.value);
